@@ -1,0 +1,27 @@
+//visualizando todas as configuraçoes do git
+git config --list --show-origin
+
+//Configurando a identidade do git
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+//iniciando um repositório
+git init (para iniciar um repositório git)
+
+//verificando o estado atual do repositório
+git status
+
+//para adicionar tudo que está no repositório para mudanças
+git add ./
+
+//comando para enviar o repositório para o versionamento
+git commit -m "mensagem...first commit"
+
+//para verificar as atualizações da mudança
+git log
+
+//Vai para a versão do identificador digitado
+git checkout identificadorDoCommit
+
+//Volta para a breach principal
+git checkout master ou main
