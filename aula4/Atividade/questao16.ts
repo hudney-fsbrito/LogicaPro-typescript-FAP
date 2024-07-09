@@ -1,3 +1,4 @@
+//Solicite ao usuário um número inteiro e exiba se ele é par ou ímpar.
 let numeroParImpar : number = Number(prompt('Digite um número'))
 
 function parOuImpar(num:number) {
