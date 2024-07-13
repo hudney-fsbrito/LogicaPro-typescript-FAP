@@ -73,11 +73,13 @@
 // console.log(numeros);
 // console.log(numeros?.split(' ').length);
 
+// //Primeira maneira
 // let numerosDigitados1 = [numeros?.split(' ')]
 // console.log(numerosDigitados1);
 
 // console.log(numerosDigitados1[0].length);
 
+// //Segunda maneira
 // let numerosDigitados2: string[] = [numeros?.split(' ')]
 // console.log(numerosDigitados2);
 
@@ -218,3 +220,335 @@ exiba o resultado.*/
 // }
 
 // console.log(calculaAreaTriangulo(baseRetangulo, alturaRetangulo));
+
+//Questão 23
+/*Peça ao usuário que digite a sua cidade e verifique se ela começa com a letra "S" (ou outra letra de
+sua escolha).*/
+
+// let nameCity = prompt("Digiti o nome da sua cidade")?.toLowerCase();
+
+// function checksCity(name: string) {
+//   if (!name || name === undefined) {
+//     alert("ERRO Digite algo!");
+//   } else if (name[0] === "r") {
+//     alert(name.toUpperCase());
+//   } else {
+//     alert("Tente novamente! " + name.toUpperCase());
+//   }
+// }
+
+// checksCity(nameCity);
+
+//Questão 24
+//Solicite ao usuário que insira dois números decimais e calcule o resto da divisão entre eles.
+
+// let firstNumber = Number(prompt('Digite um valor com decimal: '))
+// let secondNumber = Number(prompt('Digite outro valor com decimal: '))
+
+// function calcFloat(num1: number, num2:number) {
+//   let result = num1 % num2
+//   return result
+// }
+
+// alert(calcFloat(firstNumber, secondNumber))
+
+//Questão 25
+/*Solicite ao usuário um número decimal e converta-o em um número inteiro.*/
+
+// let numberFloat = Number(prompt('Digite um número decimal: '))
+
+// function convertInt(num:number) {
+
+//   alert(parseInt(num))
+//   /*alert(Math.round(num))
+//   alert(Math.floor(num))
+//   alert(Math.ceil(num))*/
+
+// }
+// convertInt(numberFloat)
+
+//Questão 26
+/* Receba uma string contendo um número inteiro e some 10 a esse número, convertendo-o
+novamente para uma string antes de exibi-lo. */
+
+// let numero = Number(prompt('Digite um número para soma: '));
+// numero = numero + 10;
+// alert(numero.toString())
+
+//Questão 27
+/*Solicite ao usuário que digite uma data no formato "dd/mm/aaaa" e extraia o dia, o mês e o ano
+separadamente, convertendo-os em números inteiros.*/
+
+// let age = prompt(`Digite a data de nascimento em formato "dd/mm/aaaa": `)
+// let result: string[] = [age?.split('/')]
+// console.log(result[0]);
+// for (let i = 0; i < result[0].length; i++) {
+//   const element = result[0];
+//   console.log(parseInt(element[i]));
+// }
+
+// result[0].map((item)=>{
+//   console.log(parseInt(item));
+// })
+
+//Questão 28
+/*Receba o nome de uma cidade do usuário e concatene-o com o nome do estado para formar uma
+mensagem completa, como "Você mora em [cidade], [estado].".*/
+
+// let nameCity = prompt("Digite o nome de sua cidade: ")
+// let nameState = prompt('Digite o nome do seu estado: ')
+// let message
+// alert(`Você mora na cidade de ${nameCity} do estado de ${nameState}? Ok!`)
+
+//Questao 29
+/*Solicite ao usuário que insira seu ano de nascimento e concatene-o com uma mensagem de
+boas-vindas, como "Bem-vindo ao nosso programa, nascido em [ano de nascimento]!".*/
+
+// let dataNascimento = prompt('Digite sua data de nascimento em formato dd/mm/aaaa: ')
+// let nome1 = prompt('Digite seu nome: ')
+// alert(`Olá ${nome1}, nascido em ${dataNascimento}. Seja bem vindo!`)
+
+//Questão 30
+/*Receba um número inteiro e uma string do usuário. Em seguida, concatene-os em uma única
+string, separando-os com um espaço.*/
+
+// let nomeStri = prompt('Digite seu nome: ')
+// let numeroINt = Number(prompt('Digite o número do seu pé: '))
+// let texto1 = `${nomeStri} ${numeroINt}`
+// alert(texto1)
+
+//Questão 31
+/*Receba o nome de um produto digitado pelo usuário e concatene-o com o preço do produto,
+adicionando o símbolo de moeda da sua escolha.*/
+
+// let nomeCliente = prompt('Digite seu nome: ')
+// let valor = Number(prompt('Digite seu saldo: '))
+// let valorBrasil = new Intl.NumberFormat('pt-Br', {style: 'currency', currency: 'BRL'}).format(valor);
+
+// if (!valor) {
+//   alert('valor não compatível, digite novamente!')
+// }else{
+//   alert(`Sr. ${nomeCliente} seu saldo é: ${valorBrasil}`)
+// }
+
+//Questão 32
+/*Receba um número inteiro do usuário e concatene-o com uma mensagem, informando o dobro
+desse número.*/
+
+// const numero2 = Number(prompt("Digite um valor:"));
+// let dobroNumero = numero2 * 2;
+
+// if (!numero2) {
+//   alert(`Não foi possível completar!`)
+// } else {
+//   alert(`O dobro de ${numero2} é ${dobroNumero}`)
+// }
+
+//Questão 33
+/*Receba uma string contendo um endereço de e-mail e concatene-a com uma mensagem de
+agradecimento personalizada.*/
+
+// let email = prompt("Digite seu e-mail")
+
+// if (!email || email === "") {
+//   alert('Digite um email válido')
+// } else {
+
+//   let message = `Obrigado! O e-mail "${email}" foi cadastrado com sucesso!`
+//   alert(message)
+// }
+
+//Questão 34
+/*Receba dois números inteiros do usuário e exiba a soma, a diferença, o produto e o quociente
+(divisão inteira) entre eles.*/
+
+// let numX = Number(prompt("Digite o primeiro número Inteiro"));
+
+// let op = String(
+//   prompt("Digite * multiplicação; / divisão; + adição; - subitração")
+// );
+
+// let numY = Number(prompt("Digite o segundo número Inteiro"));
+
+// function calcInteiro(num1: number, num2: number, op: string) {
+//   let resultado: number;
+//   if (op === "+") {
+//     resultado = num1 + num2;
+//     alert(`O resultado da soma é: ${resultado}`);
+//   } else if (op === "-") {
+//     resultado = num1 - num2;
+//     alert(`O resultado da subtração é: ${resultado}`);
+//   } else if (op === "/") {
+//     resultado = num1 / num2;
+//     alert(`O resultado da divisão é: ${resultado}`);
+//   } else if (op === "*") {
+//     resultado = num1 * num2;
+//     alert(`O resultado da multiplicação é: ${resultado}`);
+//   }
+// }
+
+// calcInteiro(numX, numY, op);
+
+//Questão 35
+/*Peça ao usuário para digitar a base e a altura de um triângulo. Em seguida, calcule e exiba a área do
+triângulo.*/
+
+// let baseTriangulo = Number(prompt('Digite a base do triângulo'))
+// let alturaTriangulo = Number(prompt('Digite a altura do triângulo'))
+// function calcTriangulo(base:number, altura:number) {
+//   let resultado = (base * altura) / 2;
+//   alert(resultado)
+// }
+// calcTriangulo(baseTriangulo,alturaTriangulo)
+
+//Questão 36
+//Receba o raio de uma circunferência digitado pelo usuário e calcule o seu perímetro (2 * π * raio).
+
+// let raio = Number(prompt('Digite o raio desejado'))
+
+// let PI = Number(Math.PI.toFixed(2))
+
+// function calculaCircunferencia(raio:number, pi:number) {
+//   let resultado: number = 2 * pi * raio;
+//   if (!raio) {
+//      alert('Digite um número válido')
+//   }else{
+
+//     alert(resultado)
+//   }
+
+// };
+
+// calculaCircunferencia(raio,PI)
+
+//Questão 37
+/*Receba a base e a altura de um retângulo digitados pelo usuário. Em seguida, calcule e exiba o
+perímetro do retângulo.*/ // 2*(b+h)
+
+// let basRetangulo = Number(prompt("Digite a base"));
+// let altRetangulo = Number(prompt("Digite a altura"));
+// function calcPerimetroRetangulo(base: number, altura: number) {
+//   if (!base || !altura) {
+//     alert("Digite um número válido");
+//   } else {
+//     let resultado = 2 * (base + altura);
+//     alert(`O perímetro do rentângulo é ${resultado}`);
+//   }
+// }
+// calcPerimetroRetangulo(basRetangulo, altRetangulo);
+
+//Questão 38
+/*Solicite ao usuário que insira três números decimais. Em seguida, calcule e exiba a média
+aritmética desses números.*/
+
+// let numDec1: number = parseFloat(prompt('Primeiro número')!)
+// let numDec2: number = parseFloat(prompt('Segundo número')!)
+// let numDec3: number = parseFloat(prompt('Terceiro número')!)
+
+// function calcMedia(num1:number, num2:number, num3:number) {
+//   if (!num1 || !num2 || !num3) {
+//     alert('Digite um número válido!!!')
+//   } else {
+//     let result0Media : number = (num1 + num2 + num3) / 3;
+//     alert(`A média é: ${result0Media.toFixed(2)}`)
+//   }
+// }
+
+// calcMedia(numDec1,numDec2,numDec3)
+
+//Questão 39
+/*Peça ao usuário para digitar a sua idade e, em seguida, informe quantos meses e quantos dias ele já
+viveu (considerando um ano com 365 dias).*/
+
+/*
+Uma maneira diferente
+let dataDeNascimento = prompt('Data de nascimento: dd/mm/aaaa')
+let dataString: Number[] = [dataDeNascimento.split('/')]
+let dataNumero = dataString[0];*/
+
+/*let idadeDeNascimento = parseInt(prompt("Digite sua idade")!);
+
+const mesesDeVida = (idade: number) => {
+  return idade * 12;
+};
+
+const diasDeVida = (idade: number) => {
+  return idade * 365;
+};
+
+if (!idadeDeNascimento) {
+  alert("Digite uma idade válida!");
+} else {
+  alert(
+    `Parabéns! Você possui ${mesesDeVida(
+      idadeDeNascimento
+    )} meses de vida e ${diasDeVida(idadeDeNascimento)} dias de vida.`
+  );
+}*/
+
+//Questão 40
+/*Receba um valor em reais e a cotação do dólar digitados pelo usuário. Em seguida, converta o valor
+para dólares e exiba o resultado.*/
+
+/*let valorReais = parseFloat(prompt(`Digite o valor á ser convertido`)!)
+let cotacaoDolar = parseFloat(prompt(`Cotação do dolar atual`)!)
+
+function converteParaDolar(valor1:number, cota1:number) {
+  if (!valor1 || !cota1) {
+    alert('Digite um valor válido')
+  }else{
+    valor1 = valor1 * cota1;
+    let valorDolar = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(valor1);
+    alert(valorDolar)
+  }
+}
+
+converteParaDolar(valorReais,cotacaoDolar)*/
+
+
+//Questão 41
+/*Solicite ao usuário para digitar um número decimal e arredonde-o para o inteiro mais próximo.*/
+
+// let numDecimal = parseFloat(prompt('Digite um valor decimal')!)
+// let numDecimalArredondado = Math.round(numDecimal);
+// if (!numDecimal) {
+//   alert('Digite um número válido')
+// }else{
+//   alert(`Arredondando o número ${numDecimal} para o inteiro mais próximo, fica ${numDecimalArredondado}`)
+// }
+
+//Questão 42
+/*Receba três números inteiros digitados pelo usuário e exiba o resultado da operação (n1 + n2) *
+n3.*/
+
+// let numero1: number = parseInt(prompt(`Digite o valor 1`)!)
+// let numero2: number = parseInt(prompt(`Digite o valor 2`)!)
+// let numero3: number = parseInt(prompt(`Digite o valor 3`)!)
+
+// const resultado = (n1:number,n2:number, n3:number)=>{
+//   if (!numero1 || !numero2 || !numero3) {
+//     alert(`Digite um número válido`)
+//   }else{
+//     let resultado = (n1 + n2) * n3;
+//     alert(`Resultado: ${resultado}`)
+//   };
+// };
+
+// resultado(numero1,numero2,numero3)
+
+
+//Questão 43
+/*Peça ao usuário que digite uma temperatura em graus Celsius e a converta para Fahrenheit usando
+a fórmula: Fahrenheit = (Celsius * 9/5) + 32.*/
+
+// let grauCelsius: number = parseFloat(prompt('Quantos gruas está fazendo em Celsius???')!);
+
+// function converteFahrenheit(num:number) {
+//   let fahrenheit:number;
+//   fahrenheit = (num * 9/5) + 32
+//   return fahrenheit
+// }
+
+// alert(`A temperatura em Fahrenheit de ${grauCelsius}°C é ${converteFahrenheit(grauCelsius)}°F.`)
+
+location.reload();
