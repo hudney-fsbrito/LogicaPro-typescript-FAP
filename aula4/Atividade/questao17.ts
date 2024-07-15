@@ -1,12 +1,13 @@
 //Receba um número inteiro digitado pelo usuário e verifique se ele é positivo ou negativo.
 const numero: number = Number(prompt('Digite um número: '));
 
-function verificarNumeroNegativo(num:number) {
-  if (num < 0) {
-    return console.log(`O número ${numero} é um número negativo`);
+function verificaNumeroNegativo(num:number) {
+  if (!num) {
+    alert('Número inválido!!!')
+  }else{
+    num < 0 ? alert(`O número ${num} é um número negativo`) : alert(`O número ${num} NÃO é um número negativo`);
   }
-  return console.log(`O número ${numero} NÃO é um número negativo`);
-  
+
 }
 
-verificarNumeroNegativo(numero);
+verificaNumeroNegativo(numero);

@@ -13,4 +13,4 @@ console.log(numerosDigitados1[0].length);
 let numerosDigitados2: string[] = [numeros?.split(' ')]
 console.log(numerosDigitados2);
 
-console.log(numerosDigitados2[0].length);
+alert(numerosDigitados2[0].length);

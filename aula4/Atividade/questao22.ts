@@ -10,4 +10,4 @@ function calculaAreaTriangulo(base: number, altura: number) {
   return base * altura;
 }
 
-console.log(calculaAreaTriangulo(baseRetangulo, alturaRetangulo));
+alert(calculaAreaTriangulo(baseRetangulo, alturaRetangulo));
