@@ -101,5 +101,37 @@ type TipoPagamento = "PIX" | "Débito" | "Crédito" | "Boleto" | undefined;
 */
 
 
+//TESTES
+enum TipoPagamento {
+  PIX,
+  Débito,
+  Crédito,
+  Boleto,
+}
 
-window.location.reload()
+let tipoPagamento = prompt("Menu: 0 - PIX | 1 - Débito | 2 - Crédito | 3 - Boleto");
+
+const tipoPagamentoNumero = Number(tipoPagamento);
+
+switch (tipoPagamentoNumero) {
+  case TipoPagamento.PIX:
+    alert(`Pagamento com: ${TipoPagamento[tipoPagamentoNumero]}`);
+    break;
+  case TipoPagamento.Débito:
+    alert(`Pagamento com: ${TipoPagamento[tipoPagamentoNumero]}`);
+    break;
+  case TipoPagamento.Crédito:
+    alert(`Pagamento com: ${TipoPagamento[tipoPagamentoNumero]}`);
+    break;
+  case TipoPagamento.Boleto:
+    alert(`Pagamento com: ${TipoPagamento[tipoPagamentoNumero]}`);
+    break;
+  default:
+    alert("Tipo de pagamento inválido");
+    break;
+}
+
+
+
+location.reload();
+
