@@ -2,6 +2,9 @@
 //estrutura de repetição "for"?
 
 /* 
+
+RESPOSTA:
+
 Na expressão, é colocado um incremento ou decremento.
 Enquanto a condição não é atingida esse incremente/decremento
 é executado.

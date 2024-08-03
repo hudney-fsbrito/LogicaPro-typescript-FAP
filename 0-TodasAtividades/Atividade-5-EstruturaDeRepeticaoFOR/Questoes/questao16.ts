@@ -12,8 +12,13 @@ for (let i = 1; i <= 5; i++) {
     alert(`Digite um valor copatível`);
   }
 }
-for (const nota of notas) {
-  resultado = resultado + nota;
+if (notas.length < 5) {
+  alert("Faltou alguma nota, tente novamente!")
+} else {
+  for (const nota of notas) {
+    resultado = resultado + nota;
+  }
+  media = resultado / 5;
+  alert(`A média do respectível aluno é: ${media.toFixed(2)}`);
+
 }
-media = resultado / 5;
-alert(`A média do respectível aluno é: ${media.toFixed(2)}`);

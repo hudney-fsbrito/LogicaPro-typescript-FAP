@@ -1,3 +1,5 @@
+/* Implemente o código do slide de número 44. */
+
 let nomes: string[] = [
     'João', 
     'Paulo', 
