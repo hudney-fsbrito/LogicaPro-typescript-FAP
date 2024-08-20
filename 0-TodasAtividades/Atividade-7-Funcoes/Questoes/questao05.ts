@@ -3,7 +3,7 @@ Escreva uma função chamada "soma"
 que receba dois parâmetros (a e b) e retorne a soma deles.
 */
 
-const arrSoma = solicitaNumeros(2, 'número')
+let arrSoma = solicitaNumeros(2, 'número')
 
 function soma(a: number, b:number){
   return (a + b).toFixed(2);
