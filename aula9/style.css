@@ -1,0 +1,23 @@
+body{
+    background-color: blanchedalmond;
+}
+
+h1{
+    color:  rgb(244, 84, 20);
+}
+
+.title{
+    color: green !important; /* A palavra chave só serve para a propriedade e não para o seletor todo */
+}
+
+#title{
+    color: aqua;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+body :nth-child(4){
+color: green;
+font-family: "Poppins", sans-serif;
+}
