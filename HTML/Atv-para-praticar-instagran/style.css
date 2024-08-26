@@ -1,0 +1,115 @@
+body {
+  background-color: black;
+  padding: 50px 0 0 0;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  height: 500px;
+  margin: auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 100;
+}
+.content {
+  padding: 15px;
+}
+
+header,
+.containerPerfil,
+.containerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+}
+
+.containerPerfil,
+.containerMenu {
+  /* border: 1px solid red; */
+  padding: 0;
+  width: 8em;
+}
+.containerMenu {
+  justify-content: end;
+  width: 10em;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.textoFollow {
+  color: rgb(136, 207, 255);
+  border: 2px solid rgb(136, 207, 255);
+  border-radius: 5px;
+  padding: 1px 15px;
+  margin-right: 2px;
+  font-size: 12px;
+}
+
+.icon {
+  /* display: inline-block; */
+  width: 2em;
+  height: 2em;
+  padding: 0%;
+  margin: 0;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.imgPerfil {
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.imgPostagem {
+  box-sizing: border-box;
+  height: 300px;
+  width: 100%;
+}
+.interacao {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+ul:first-child {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90px;
+  font-size: 12px;
+}
+
+.curtidas {
+    margin: 0;
+    padding: 0;
+    width: 15px;
+}
+.hash {
+    display: flex;
+    align-items: center;
+    color:  rgb(136, 207, 255);
+    font-size: 12px;
+}
+.hash p{
+    padding-left: 10px;
+}
+.hash p:first-child{
+    color: black;
+}
