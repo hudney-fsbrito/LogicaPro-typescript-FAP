@@ -1,20 +1,34 @@
+import { randomUUID } from "node:crypto";
+import { faker } from "@faker-js/faker";
+
+//Cria a classe postagem 
 class Post {
+    private _idPost: string;
+    private _avatar: string;
     private _userName: string;
     private _imageUrl: string;
     private _descricao: string;
     private _numLikes: number;
+    private _isLike: boolean;
+    private _comentario: string[];
     
-    constructor(userName: string,imageUrl: string,descricao: string){
+    constructor(avatar: string,userName: string,imageUrl: string,descricao: string){
+        this._idPost = randomUUID();
+        this._avatar = avatar;
         this._userName = userName;
         this._imageUrl = imageUrl;
         this._descricao = descricao;
         this._numLikes = 0;
+        this._isLike = false;
+        this._comentario = [];
     }
     
+    // Método para quantificar o número de curtidas na postagem
     incrementarLike(){
         this._numLikes += 1;
     }
-    
+
+    //
     get getUserName(){
         return this._userName
     }
@@ -25,8 +39,18 @@ class Post {
     get getDescricao(): string {
         return this._descricao;
     }
+
+    // Adiciona descrição na postagem
     set setDescricao(setDescricao: string) {
         this._descricao = setDescricao;
+    }
+
+    // Determina se a postagem está curtida
+    set setIsLike(setIsLike: boolean){
+        this._isLike = setIsLike;
+        if (!this._isLike) {
+            setIsLike = true
+        }
     }
 
     get getNumLikes(): number {
@@ -35,12 +59,17 @@ class Post {
     
 }
 
-const post1 = new Post('Hudney', 'http:/', 'Imagem_1')
-console.log(post1);
-const post2 = new Post('Brito', 'http:/', 'Imagem_2')
-post1.setDescricao = 'Outra descrição'
-console.log(post2);
+// Cria instâncias da classe Post com dados fictícios
+const posts: Post[] = [];
+for (let index = 0; index < 15; index++) {
+  const post = new Post(
+    faker.image.avatar(),
+    faker.person.firstName(),
+    faker.image.url(),
+    faker.lorem.lines(),
+    
+    );
+  posts.push(post);
+}
 
-post1.incrementarLike()
-post1.incrementarLike()
-console.log(post1);
+console.log(posts);
